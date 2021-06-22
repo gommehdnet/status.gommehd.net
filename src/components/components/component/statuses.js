@@ -19,6 +19,11 @@ export default {
     colour: "#8e3b31",
     backgroundColour: "rgba(217, 68, 48, 0.1)",
   },
+  maintenance: {
+    name: "Scheduled Maintenance",
+    colour: "#8e8e8e",
+    backgroundColour: "rgba(142, 142, 142, 1)",
+  },
   unknown: {
     name: "Unknown",
     colour: "#6e6b6b",
