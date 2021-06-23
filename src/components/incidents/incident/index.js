@@ -27,10 +27,11 @@ const Details = styled.div`
   margin-bottom: 3px;
 `;
 
-const Title = styled.div`
+const Title = styled.h3`
   margin-right: 16px;
   font-weight: bold;
   margin-bottom: 8px;
+  margin-top: 0;
   color: #1e1e1e;
 `;
 
@@ -69,7 +70,7 @@ const IncidentCompound = ({ incident }) => (
     </Details>
     <Title>{incident.title}</Title>
     <Comment>
-      <ReactMarkdown source={incident.body} />
+      <ReactMarkdown className="incident" children={incident.body} />
     </Comment>
   </Incident>
 );
