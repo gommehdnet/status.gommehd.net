@@ -3,6 +3,8 @@ import statuses from "./statuses";
 
 export default (labels) => {
   const [status, setStatus] = useState();
+  console.log(statuses);
+  console.log(labels.map(e => e.name));
 
   useEffect(() => {
     setStatus(
