@@ -41,9 +41,9 @@ const Comment = styled.div`
 `;
 
 const Status = styled.div`
-  color: ${(props) => (props.active ? "#6e6b6b" : "#2f5888")};
+  color: ${(props) => (props.active ? "#717171" : "#2f5888")};
   background-color: ${(props) =>
-    props.active ? "rgba(177, 177, 177, 0.1)" : "rgba(73, 144, 226, 0.1)"};
+    props.active ? "rgba(96, 96, 96, 0.1)" : "rgba(73, 144, 226, 0.1)"};
   padding: 5px 12px;
   border-radius: 16px;
   font-size: 13px;
@@ -64,7 +64,7 @@ const IncidentCompound = ({ incident }) => (
           .format('LLL')
           .toUpperCase()}
       </Created>
-      <Status active={incident.closed_at}>
+      <Status className={incident.closed_at ? null : 'activeIncident'} active={incident.closed_at}>
         {incident.closed_at ? l10n.incidents.closed : l10n.incidents.active}
       </Status>
     </Details>
