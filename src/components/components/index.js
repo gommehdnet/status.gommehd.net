@@ -2,8 +2,9 @@ import React from "react";
 import Skeleton from "./skeleton";
 import Component from "./component";
 import useDidMount from "../useDidMount";
+import l10n from '../../language';
 
-export default ({ loading, components }) => {
+const ComponentList = ({ loading, components }) => {
   const [hasMounted] = useDidMount();
 
   return !loading || hasMounted ? (
@@ -12,7 +13,7 @@ export default ({ loading, components }) => {
         <Component key={component.id} component={component} />
       ))
     ) : (
-      <p>No Components found.</p>
+      <p>{l10n.error.nocomponents}</p>
     )
   ) : (
     <>
@@ -22,3 +23,5 @@ export default ({ loading, components }) => {
     </>
   );
 };
+
+export default ComponentList;

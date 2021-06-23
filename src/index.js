@@ -3,6 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
+import moment from "moment-with-locales-es6";
+import l10n from './language';
+
+moment.locale(l10n.getLanguage());
 
 ReactDOM.render(
   <React.StrictMode>

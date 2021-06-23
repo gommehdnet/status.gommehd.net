@@ -14,7 +14,7 @@ const Header = styled.div`
   margin-bottom: 16px;
 `;
 
-export default () =>
+const HeaderCompound = () =>
   process.env.REACT_APP_LOGO || process.env.REACT_APP_NAME ? (
     <Header>
       {process.env.REACT_APP_LOGO ? (
@@ -27,3 +27,5 @@ export default () =>
       )}
     </Header>
   ) : null;
+
+export default HeaderCompound;

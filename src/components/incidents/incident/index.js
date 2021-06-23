@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import moment from "moment";
+import moment from "moment-with-locales-es6";
 import ReactMarkdown from "react-markdown";
+import l10n from '../../../language';
 
 const Incident = styled.div`
   transition: 0.3s;
   border-left: 16px solid
     ${(props) =>
-      props.active ? "rgba(177, 177, 177,0.2)" : "rgba(73, 144, 226, 0.2)"};
+    props.active ? "rgba(177, 177, 177,0.2)" : "rgba(73, 144, 226, 0.2)"};
   background-color: white;
   border-radius: 3px;
   padding: 16px;
@@ -54,16 +55,16 @@ const Created = styled.div`
   font-weight: bold;
 `;
 
-export default ({ incident }) => (
+const IncidentCompound = ({ incident }) => (
   <Incident active={incident.closed_at}>
     <Details>
       <Created>
         {moment(incident.created_at)
-          .format("MMMM Do YYYY, h:mm a")
+          .format('LLL')
           .toUpperCase()}
       </Created>
       <Status active={incident.closed_at}>
-        {incident.closed_at ? "Closed" : "Active"}
+        {incident.closed_at ? l10n.incidents.closed : l10n.incidents.active}
       </Status>
     </Details>
     <Title>{incident.title}</Title>
@@ -72,3 +73,5 @@ export default ({ incident }) => (
     </Comment>
   </Incident>
 );
+
+export default IncidentCompound;

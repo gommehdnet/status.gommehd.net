@@ -1,0 +1,66 @@
+{
+    "en": {
+        "error": {
+            "noincidents": "No incidents found",
+            "nocomponents": "No components found",
+            "message": {
+                "title": "An error occured",
+                "body": "You may have exceeded the rate limit. Try again in 1 hour to fetch the latest data."
+            }
+        },
+        "general": {
+            "refresh": "Last refresh: ",
+            "refreshing": "refreshing..."
+        },
+        "incidents": {
+            "title": "Incidents",
+            "closed": "Closed",
+            "active": "Active"
+        },
+        "components": {
+            "operational": "Operational",
+            "performanceIssues": "Performance Issues",
+            "partialOutage": "Partial Outage",
+            "majorOutage": "Major Outage",
+            "maintenance": "Maintenance",
+            "unknown": "Unknown"
+        },
+        "status": {
+            "operational": "All Systems Operational",
+            "issues": "Some systems are experiencing issues",
+            "outage": "Some systems are experiencing a major outage"
+        }
+    },
+    "de": {
+        "error": {
+            "noincidents": "Keine Meldungen gefunden",
+            "nocomponents": "Keine Komponenten gefunden",
+            "message": {
+                "title": "Ein Fehler ist aufgetreten",
+                "body": "Du hast eventuell das Anfragenlimit überschritten. Bitte versuche es in einer Stunde erneut."
+            }
+        },
+        "general": {
+            "refresh": "Zuletzt aktualisiert: ",
+            "refreshing": "laden ..."
+        },
+        "incidents": {
+            "title": "Meldungen",
+            "closed": "Abgeschlossen",
+            "active": "Aktiv"
+        },
+        "components": {
+            "operational": "Funktionsfähig",
+            "performanceIssues": "Leistungsprobleme",
+            "partialOutage": "Teilausfall",
+            "majorOutage": "Ausfall",
+            "maintenance": "Wartungen",
+            "unknown": "Unbekannt"
+        },
+        "status": {
+            "operational": "Alle Systeme funktionsfähig",
+            "issues": "Einige Systeme haben Probleme",
+            "outage": "Einige Systeme melden einen Ausfall"
+        }
+    }
+}

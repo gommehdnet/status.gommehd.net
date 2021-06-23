@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import useStatus from "./useStatus";
 import useRefetch from "./useRefetch";
+import l10n from '../../language';
 
 const StatusBar = styled.div`
   background-color: ${(props) =>
@@ -23,13 +24,19 @@ const Status = styled.h2`
   font-weight: normal;
 `;
 
+const ReloadContainer = styled.span`
+  background-color: transparent;
+  text-align: right;
+  padding: 0;
+  font-size: 13px;
+`;
+
 const Reload = styled.button`
   background-color: transparent;
   color: white;
   text-decoration: underline;
   border: none;
   cursor: pointer;
-  text-align: right;
   padding: 0;
 `;
 
@@ -39,7 +46,7 @@ const Code = styled.code`
 `;
 
 // TODO: change all systems status based on current status of all components
-export default ({ loading, error, components, refetch }) => {
+const StatusCompound = ({ loading, error, components, refetch }) => {
   const [status] = useStatus(components);
   const [timeAgo] = useRefetch(refetch, loading);
 
@@ -47,18 +54,17 @@ export default ({ loading, error, components, refetch }) => {
     <>
       {error.hasError && (
         <Code>
-          <div>An error occured</div>
-          <div>
-            You may have exceeded the rate limit. Try again in 1 hour to fetch
-            the latest data.
-          </div>
+          <div>{l10n.error.message.title}</div>
+          <div>{l10n.error.message.body}</div>
           {JSON.stringify(error.errors, null, 3)}
         </Code>
       )}
       <StatusBar backgroundColour={status?.backgroundColour}>
         <Status>{status?.message}</Status>
-        <Reload onClick={refetch}>{loading ? "reloading" : timeAgo}</Reload>
+        <ReloadContainer>{l10n.general.refresh}<Reload onClick={refetch}>{loading ? l10n.general.refreshing : timeAgo}</Reload></ReloadContainer>
       </StatusBar>
     </>
   );
 };
+
+export default StatusCompound;

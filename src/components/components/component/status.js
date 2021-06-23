@@ -11,12 +11,14 @@ const Status = styled.div`
   transition: 0.3s;
 `;
 
-export default ({ labels }) => {
+const StatusCompound = ({ labels }) => {
   const [status] = useStatus(labels);
 
   return (
     <Status colour={status?.colour} backgroundColour={status?.backgroundColour}>
-      {status?.name}
+      {status?.locName}
     </Status>
   );
 };
+
+export default StatusCompound;

@@ -21,7 +21,7 @@ const ComponentsContainer = styled.div`
   padding: 16px;
 `;
 
-export default () => {
+const App = () => {
   // loading, errors, results, refetch
   const [
     componentsLoading,
@@ -62,3 +62,5 @@ export default () => {
     </Container>
   );
 };
+
+export default App;

@@ -19,7 +19,7 @@ const Branding = styled.a`
   }
 `;
 
-export default () => (
+const FooterCompound = () => (
   <Footer>
     <div></div>
     <Branding
@@ -32,3 +32,5 @@ export default () => (
     </Branding>
   </Footer>
 );
+
+export default FooterCompound;

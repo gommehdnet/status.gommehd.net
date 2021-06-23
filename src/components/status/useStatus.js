@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import statuses from "./statuses";
 
-export default (components) => {
+const useStatus = (components) => {
   const [status, setStatus] = useState();
 
   useEffect(() => {
@@ -29,3 +29,5 @@ const getComponentLabelPercent = (components, label) =>
   ).length *
     100) /
   components.length;
+
+export default useStatus;

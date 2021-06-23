@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Incident from "./incident";
 import Skeleton from "./skeleton";
 import useDidMount from "../useDidMount";
+import l10n from '../../language';
 
 const Container = styled.div`
   margin: 32px auto 0 auto;
@@ -19,19 +20,19 @@ const NoFound = styled.div`
   margin: 0 8px;
 `;
 
-export default ({ loading, incidents }) => {
+const IncidentList = ({ loading, incidents }) => {
   const [hasMounted] = useDidMount();
 
   return (
     <Container>
-      <Title>Incidents</Title>
+      <Title>{l10n.incidents.title}</Title>
       {!loading || hasMounted ? (
         incidents?.length > 0 ? (
           incidents?.map((incident) => (
             <Incident key={incident.id} incident={incident} />
           ))
         ) : (
-          <NoFound>No Incidents found.</NoFound>
+          <NoFound>{l10n.error.noincidents}</NoFound>
         )
       ) : (
         <>
@@ -43,3 +44,5 @@ export default ({ loading, incidents }) => {
     </Container>
   );
 };
+
+export default IncidentList;
