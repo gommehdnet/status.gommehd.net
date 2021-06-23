@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import l10n from "../../language";
 
 const Footer = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const FooterCompound = () => (
       rel="noopener"
       target="_blank"
     >
-      Imprint & Privacy Policy
+      {l10n.general.imprint}
     </Branding>
     <Branding
       visible={process.env.REACT_APP_BRANDING !== "false"}
@@ -35,7 +36,7 @@ const FooterCompound = () => (
       rel="noopener"
       target="_blank"
     >
-      Powered by Issue Status
+      {l10n.general.branding}
     </Branding>
   </Footer>
 );

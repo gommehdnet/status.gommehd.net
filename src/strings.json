@@ -6,11 +6,18 @@
             "message": {
                 "title": "An error occured",
                 "body": "You may have exceeded the rate limit. Try again in 1 hour to fetch the latest data."
+            },
+            "notfound": {
+                "title": "404",
+                "description": "Seems like this page does not exist.",
+                "link": "Back to home"
             }
         },
         "general": {
             "refresh": "Last refresh: ",
-            "refreshing": "refreshing..."
+            "refreshing": "refreshing...",
+            "imprint": "Imprint & Privacy Policy",
+            "branding": "Powered by Issue Status"
         },
         "incidents": {
             "title": "Incidents",
@@ -38,11 +45,18 @@
             "message": {
                 "title": "Ein Fehler ist aufgetreten",
                 "body": "Du hast eventuell das Anfragenlimit überschritten. Bitte versuche es in einer Stunde erneut."
+            },
+            "notfound": {
+                "title": "404",
+                "description": "Scheint so, als hättest du dich verlaufen.",
+                "link": "Zurück zur Startseite"
             }
         },
         "general": {
             "refresh": "Zuletzt aktualisiert: ",
-            "refreshing": "laden ..."
+            "refreshing": "laden ...",
+            "imprint": "Impressum & Datenschutzerklärung",
+            "branding": "Powered by Issue Status"
         },
         "incidents": {
             "title": "Meldungen",

@@ -8,6 +8,7 @@ import Header from "./header";
 import Incidents from "./incidents";
 import Status from "./status";
 import useIssues from "./useIssues";
+import l10n from '../language';
 
 const Container = styled.div`
   max-width: 1008px;
@@ -97,9 +98,9 @@ const MainPage = () => {
 
 const FourZeroFour = () => {
   return (<ErrorContainer>
-    <ErrorTitle>404</ErrorTitle>
-    <p>Seems like this page does not exist.</p>
-    <p><ErrorBackLink href="/">Back to home</ErrorBackLink></p>
+    <ErrorTitle>{l10n.error.notfound.title}</ErrorTitle>
+    <p>{l10n.error.notfound.description}</p>
+    <p><ErrorBackLink href="/">{l10n.error.notfound.link}</ErrorBackLink></p>
   </ErrorContainer>);
 }
 
