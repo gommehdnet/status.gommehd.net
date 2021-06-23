@@ -21,7 +21,14 @@ const Branding = styled.a`
 
 const FooterCompound = () => (
   <Footer>
-    <div></div>
+    <Branding
+      visible={process.env.REACT_APP_BRANDING !== "false"}
+      href="https://imprint.gommehd.net"
+      rel="noopener"
+      target="_blank"
+    >
+      Imprint & Privacy Policy
+    </Branding>
     <Branding
       visible={process.env.REACT_APP_BRANDING !== "false"}
       href="https://github.com/tadhglewis/issue-status"
