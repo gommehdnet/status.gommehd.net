@@ -7,7 +7,7 @@ const Statuses = {
   },
   issues: {
     message: l10n.status.issues,
-    backgroundColour: "#4990e2",
+    backgroundColour: "#e27b49",
   },
   outage: {
     message: l10n.status.outage,
