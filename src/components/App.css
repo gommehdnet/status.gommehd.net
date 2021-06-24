@@ -1,6 +1,6 @@
-.incident p {
-    margin: 0;
-}
+/*
+    Incident Animation
+*/
 
 .activeIncident {
     position: relative;
@@ -33,5 +33,149 @@
     }
     100% {
         opacity: 0
+    }
+}
+
+/*
+    Component Status Colors
+*/
+
+.component-status.operational {
+    color: #247234;
+}
+
+.component-status.performanceissues {
+    color: #2f5888;
+}
+
+.component-status.partialoutage {
+    color: #74582a;
+}
+
+.component-status.majoroutage {
+    color: #8e3b31;
+}
+
+.component-status.maintenance {
+    color: #717171;
+}
+
+.component-status.unknown {
+    color: #6e6b6b;
+}
+
+@media (prefers-color-scheme: dark) {
+    .component-status.operational {
+        color: #46b75d;
+    }
+    .component-status.performanceissues {
+        color: #4173ac;
+    }
+    .component-status.partialoutage {
+        color: #aa8448;
+    }
+    .component-status.majoroutage {
+        color: #b4554b;
+    }
+    .component-status.maintenance {
+        color: #a3a3a3;
+    }
+    .component-status.unknown {
+        color: #b9b7b7;
+    }
+}
+
+/*
+    General Status Background Colors
+*/
+
+.status-bar.operational {
+    background-color: #3da751;
+}
+
+.status-bar.issues {
+    background-color: #e27b49;
+}
+
+.status-bar.outage {
+    background-color: #d94430;
+}
+
+@media (prefers-color-scheme: dark) {
+    .status-bar.operational {
+        background-color: #319242;
+    }
+
+    .status-bar.issues {
+        background-color: #a7711c;
+    }
+
+    .status-bar.outage {
+        background-color: #ad3525;
+    }
+}
+
+/*
+    General
+*/
+
+.dark-logo {
+    display: none;
+}
+
+.components-container {
+    background-color: white;
+}
+
+.component {
+    background-color: #f7f8f9;
+}
+
+.incident-container {
+    background-color: white;
+    color: #1e1e1e;
+}
+
+.incident-skeleton {
+    background-color: #f7f8f9;
+}
+
+.incident-status {
+    color: #717171;
+}
+
+.incident-status.activeIncident {
+    color: #2f5888;
+}
+
+.incident p {
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-logo {
+        display: inline;
+    }
+    .light-logo {
+        display: none;
+    }
+    .components-container {
+        background-color: #181A1B;
+    }
+    .component {
+        background-color: #1C1F20;
+    }
+    .incident-container {
+        color: #fff;
+        background-color: #181A1B;
+    }
+    .incident-skeleton {
+        background-color: #181A1B;
+    }
+    .incident-status {
+        color: #a0a0a0;
+    }
+    .incident-status.activeIncident {
+        color: #5787be;
     }
 }

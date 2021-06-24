@@ -4,3 +4,23 @@ body {
   font-family: Arial;
   background-color: #f5f8fa;
 }
+
+a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1C1F20;
+    color: #fff;
+  }
+  a {
+    color: rgb(197, 197, 197);
+  }
+}

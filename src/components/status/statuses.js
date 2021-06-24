@@ -3,15 +3,15 @@ import l10n from '../../language'
 const Statuses = {
   operational: {
     message: l10n.status.operational,
-    backgroundColour: "#3da751",
+    name: 'operational'
   },
   issues: {
     message: l10n.status.issues,
-    backgroundColour: "#e27b49",
+    name: 'issues'
   },
   outage: {
     message: l10n.status.outage,
-    backgroundColour: "#d94430",
+    name: 'outage'
   },
 };
 

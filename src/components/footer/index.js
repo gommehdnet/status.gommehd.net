@@ -9,15 +9,8 @@ const Footer = styled.div`
 `;
 
 const Branding = styled.a`
-  color: #6e6b6b;
   font-size: 13px;
-  text-decoration: none;
-  transition: 0.3s;
   display: ${(props) => (props.visible ? "block" : "none")};
-
-  :hover {
-    opacity: 0.9;
-  }
 `;
 
 const FooterCompound = () => (

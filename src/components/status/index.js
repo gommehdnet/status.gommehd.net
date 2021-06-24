@@ -59,7 +59,7 @@ const StatusCompound = ({ loading, error, components, refetch }) => {
           {JSON.stringify(error.errors, null, 3)}
         </Code>
       )}
-      <StatusBar backgroundColour={status?.backgroundColour}>
+      <StatusBar className={`status-bar ${status?.name}`} backgroundColour={status?.backgroundColour}>
         <Status>{status?.message}</Status>
         <ReloadContainer>{l10n.general.refresh}<Reload onClick={refetch}>{loading ? l10n.general.refreshing : timeAgo}</Reload></ReloadContainer>
       </StatusBar>

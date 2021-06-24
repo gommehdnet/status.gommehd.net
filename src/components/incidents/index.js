@@ -36,9 +36,9 @@ const IncidentList = ({ loading, incidents }) => {
         )
       ) : (
         <>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
+          <Skeleton className="incident-skeleton" />
+          <Skeleton className="incident-skeleton" />
+          <Skeleton className="incident-skeleton" />
         </>
       )}
     </Container>

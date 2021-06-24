@@ -9,7 +9,6 @@ const Incident = styled.div`
   border-left: 16px solid
     ${(props) =>
     props.active ? "rgba(177, 177, 177,0.2)" : "rgba(213, 119, 51, 0.25)"};
-  background-color: white;
   border-radius: 3px;
   padding: 16px;
   box-shadow: 0px 0px 33px -32px rgba(0, 0, 0, 0.75);
@@ -32,16 +31,13 @@ const Title = styled.h3`
   font-weight: bold;
   margin-bottom: 8px;
   margin-top: 0;
-  color: #1e1e1e;
 `;
 
 const Comment = styled.div`
   white-space: break-spaces;
-  color: #1e1e1e;
 `;
 
 const Status = styled.div`
-  color: ${(props) => (props.active ? "#717171" : "#2f5888")};
   background-color: ${(props) =>
     props.active ? "rgba(96, 96, 96, 0.1)" : "rgba(73, 144, 226, 0.1)"};
   padding: 5px 12px;
@@ -57,14 +53,14 @@ const Created = styled.div`
 `;
 
 const IncidentCompound = ({ incident }) => (
-  <Incident active={incident.closed_at}>
+  <Incident className="incident-container" active={incident.closed_at}>
     <Details>
       <Created>
         {moment(incident.created_at)
           .format('LLL')
           .toUpperCase()}
       </Created>
-      <Status className={incident.closed_at ? null : 'activeIncident'} active={incident.closed_at}>
+      <Status className={incident.closed_at ? 'incident-status' : 'activeIncident incident-status'} active={incident.closed_at}>
         {incident.closed_at ? l10n.incidents.closed : l10n.incidents.active}
       </Status>
     </Details>

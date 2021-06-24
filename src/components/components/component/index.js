@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Status from "./status";
 
 const Component = styled.div`
-  background-color: #f7f8f9;
   padding: 8px 16px;
   border-radius: 3px;
   justify-content: space-between;
@@ -17,7 +16,7 @@ const Component = styled.div`
 
 const ComponentCompound = ({ component }) => {
   return (
-    <Component>
+    <Component className="component">
       {component.title} <Status labels={component.labels} />
     </Component>
   );

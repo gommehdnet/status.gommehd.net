@@ -17,12 +17,18 @@ const Header = styled.div`
 const HeaderCompound = () =>
   process.env.REACT_APP_LOGO || process.env.REACT_APP_NAME ? (
     <Header>
-      {process.env.REACT_APP_LOGO ? (
+      {process.env.REACT_APP_LOGO ? (<>
         <Logo
+          className="light-logo"
           src={process.env.REACT_APP_LOGO}
           alt={process.env.REACT_APP_NAME}
         />
-      ) : (
+        <Logo
+          className="dark-logo"
+          src={process.env.REACT_APP_DARK_LOGO}
+          alt={process.env.REACT_APP_NAME}
+        />
+      </>) : (
         <Title>{process.env.REACT_APP_NAME}</Title>
       )}
     </Header>

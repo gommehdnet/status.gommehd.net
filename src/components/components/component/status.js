@@ -3,7 +3,6 @@ import styled from "styled-components";
 import useStatus from "./useStatus";
 
 const Status = styled.div`
-  color: ${(props) => props.colour};
   background-color: ${(props) => props.backgroundColour};
   padding: 5px 12px;
   border-radius: 16px;
@@ -15,7 +14,7 @@ const StatusCompound = ({ labels }) => {
   const [status] = useStatus(labels);
 
   return (
-    <Status colour={status?.colour} backgroundColour={status?.backgroundColour}>
+    <Status className={`component-status ${status?.name.toLowerCase().replace(' ', '')}`} backgroundColour={status?.backgroundColour}>
       {status?.locName}
     </Status>
   );

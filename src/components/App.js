@@ -19,7 +19,6 @@ const Container = styled.div`
 const ComponentsContainer = styled.div`
   box-shadow: 0px 0px 33px -32px rgba(0, 0, 0, 0.75);
   border-radius: 3px;
-  background-color: white;
   padding: 16px;
 `;
 
@@ -31,16 +30,6 @@ const ErrorContainer = styled.div`
 const ErrorTitle = styled.h1`
   font-size: 42pt;
   margin: 0;
-`;
-
-const ErrorBackLink = styled.a`
-  text-decoration: none;
-  color: #555;
-  transition: 0.3s;
-  
-  :hover {
-    opacity: 0.9;
-  }
 `;
 
 const App = () => {
@@ -74,7 +63,7 @@ const MainPage = () => {
   ] = useIssues("incident");
 
   return (<>
-    <ComponentsContainer>
+    <ComponentsContainer className="components-container">
       <Status
         loading={componentsLoading || incidentsLoading}
         error={{
@@ -100,7 +89,7 @@ const FourZeroFour = () => {
   return (<ErrorContainer>
     <ErrorTitle>{l10n.error.notfound.title}</ErrorTitle>
     <p>{l10n.error.notfound.description}</p>
-    <p><ErrorBackLink href="/">{l10n.error.notfound.link}</ErrorBackLink></p>
+    <p><a href="/">{l10n.error.notfound.link}</a></p>
   </ErrorContainer>);
 }
 
