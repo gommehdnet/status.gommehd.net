@@ -179,3 +179,9 @@
         color: #5787be;
     }
 }
+
+@media (max-width: 400px) {
+    .app-header img {
+        width: 95%;
+    }
+}
