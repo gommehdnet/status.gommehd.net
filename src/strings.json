@@ -21,7 +21,7 @@
         },
         "incidents": {
             "title": "Incidents",
-            "closed": "Closed",
+            "closed": "Resolved",
             "active": "Active"
         },
         "components": {
@@ -60,7 +60,7 @@
         },
         "incidents": {
             "title": "Meldungen",
-            "closed": "Abgeschlossen",
+            "closed": "Gelöst",
             "active": "Aktiv"
         },
         "components": {
