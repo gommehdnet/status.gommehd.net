@@ -24,7 +24,7 @@ const ComponentCompound = ({ component, components }) => {
     return null; // don't include subcomponents here
   }
 
-  if (rawChildren?.length > 0) {
+  if (rawChildren?.length > 0 && !component.labels.find((v) => v.name === 'maintenance')) {
     let children = rawChildren?.map((v) => <Component className="component collapsed">
       {v.title.split(':')[1]} <Status labels={v.labels} />
     </Component>);
