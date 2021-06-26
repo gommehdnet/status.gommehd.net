@@ -10,7 +10,7 @@ const ComponentList = ({ loading, components }) => {
   return !loading || hasMounted ? (
     components?.length > 0 ? (
       components?.map((component) => (
-        <Component key={component.id} component={component} />
+        <Component key={component.id} component={component} components={components} />
       ))
     ) : (
       <p>{l10n.error.nocomponents}</p>
