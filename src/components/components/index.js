@@ -9,7 +9,7 @@ const ComponentList = ({ loading, components }) => {
 
   return !loading || hasMounted ? (
     components?.length > 0 ? (
-      components?.map((component) => (
+      components?.sort((a,b) => a.title.localeCompare(b.title)).map((component) => (
         <Component key={component.id} component={component} components={components} />
       ))
     ) : (

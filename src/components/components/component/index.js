@@ -30,7 +30,7 @@ const ComponentCompound = ({ component, components }) => {
     </Component>);
     return (<>
       <Component onClick={() => setCollapseOpen(!isCollapseOpen)} className="component children">
-        <span>{component.title} <span className="component-dropdown">{isCollapseOpen ? "▲" : "▼"}</span></span> <Status labels={component.labels} />
+        <span>{component.title} <span className="component-dropdown">{isCollapseOpen ? "►" : "▼"}</span></span> <Status labels={component.labels} />
       </Component>
       <Collapse theme={{ collapse: 'collapse-component', content: 'collapse-content' }} isOpened={isCollapseOpen}>
         {children}
