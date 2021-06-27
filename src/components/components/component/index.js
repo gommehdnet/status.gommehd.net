@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, version } from "react";
 import styled from "styled-components";
 import Status from "./status";
 import Collapse from "react-collapse";
@@ -26,20 +26,43 @@ const ComponentCompound = ({ component, components }) => {
 
   if (rawChildren?.length > 0 && !component.labels.find((v) => v.name === 'maintenance')) {
     let children = rawChildren?.map((v) => <Component className="component collapsed">
-      {v.title.split(':')[1]} <Status labels={v.labels} />
+      <div>
+        {v.title.split(':')[1]}
+        {v.body ?
+          <span className="component-body">{v.body}</span>
+          : null
+        }
+      </div>
+      <Status labels={v.labels} />
     </Component>);
     return (<>
       <Component onClick={() => setCollapseOpen(!isCollapseOpen)} className="component children">
-        <span>{component.title} <span className="component-dropdown">{isCollapseOpen ? "►" : "▼"}</span></span> <Status labels={component.labels} />
+        <div>
+          {component.title}
+          <span className="component-dropdown">{isCollapseOpen ? "►" : "▼"}</span>
+          {component.body ?
+            <span className="component-body">{component.body}</span>
+            : null
+          }
+        </div>
+        <Status labels={component.labels} />
       </Component>
       <Collapse theme={{ collapse: 'collapse-component', content: 'collapse-content' }} isOpened={isCollapseOpen}>
         {children}
       </Collapse>
     </>);
   }
+  console.log(component);
   return (
     <Component className="component">
-      {component.title} <Status labels={component.labels} />
+      <div>
+        {component.title}
+        {component.body ?
+          <span className="component-body">{component.body}</span>
+          : null
+        }
+      </div>
+      <Status labels={component.labels} />
     </Component>
   );
 };
