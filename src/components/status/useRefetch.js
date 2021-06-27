@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import moment from "moment-with-locales-es6";
+import moment from "moment";
 
 const useRefetch = (refetch, updateTimeAgoDep) => {
   const [timeAgo, setTimeAgo] = useState(

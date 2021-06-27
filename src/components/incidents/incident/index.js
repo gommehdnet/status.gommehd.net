@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import moment from "moment-with-locales-es6";
+import moment from "moment";
 import ReactMarkdown from "react-markdown";
 import l10n from '../../../language';
 
