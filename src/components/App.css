@@ -131,6 +131,10 @@
     background-color: #f7f8f9;
 }
 
+.component-status {
+    white-space: nowrap;
+}
+
 .component.children {
     cursor: pointer;
 }
