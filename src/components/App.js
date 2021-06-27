@@ -48,6 +48,8 @@ const App = () => {
 };
 
 const MainPage = () => {
+  // set html lang from l10n module
+  document.getElementsByTagName('html')[0].setAttribute('lang', l10n.getLanguage());
   // loading, errors, results, refetch
   const [
     componentsLoading,
