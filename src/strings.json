@@ -4,7 +4,7 @@
             "noincidents": "No incidents found",
             "nocomponents": "No components found",
             "message": {
-                "title": "An error occured",
+                "title": "An error occurred",
                 "body": "You may have exceeded the rate limit. Try again in 1 hour to fetch the latest data."
             },
             "notfound": {
