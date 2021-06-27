@@ -1,4 +1,4 @@
-import React, { useState, version } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Status from "./status";
 import Collapse from "react-collapse";
@@ -25,7 +25,7 @@ const ComponentCompound = ({ component, components }) => {
   }
 
   if (rawChildren?.length > 0 && !component.labels.find((v) => v.name === 'maintenance')) {
-    let children = rawChildren?.map((v) => <Component className="component collapsed">
+    let children = rawChildren?.map((v) => <Component key={v.id} className="component collapsed">
       <div>
         {v.title.split(':')[1]}
         {v.body ?
@@ -52,7 +52,6 @@ const ComponentCompound = ({ component, components }) => {
       </Collapse>
     </>);
   }
-  console.log(component);
   return (
     <Component className="component">
       <div>
