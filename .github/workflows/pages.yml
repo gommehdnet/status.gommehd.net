@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: "10.x"
       - run: npm install
-      - run: npm run build
+      - run: npm run predeploy
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
