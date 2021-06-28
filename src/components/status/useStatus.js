@@ -12,7 +12,7 @@ const useStatus = (components) => {
       statusSet = true;
     }
 
-    if (getComponentLabelPercent(components, "major outage") > 0) {
+    if (getComponentLabelPercent(components.filter((c) => !c.labels.find((l) => l.name === 'subcomponent')), "major outage") > 0) {
       setStatus(statuses.outage);
       statusSet = true;
     }
