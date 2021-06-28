@@ -27,7 +27,7 @@
         "components": {
             "operational": "Operational",
             "performanceIssues": "Performance issues",
-            "partialOutage": "Partial Outage",
+            "partialOutage": "Restricted",
             "majorOutage": "Major Outage",
             "maintenance": "Maintenance",
             "unknown": "Unknown"
