@@ -10,7 +10,7 @@
             "notfound": {
                 "title": "404",
                 "description": "Seems like this page does not exist.",
-                "link": "Back to homepage"
+                "link": "Return"
             }
         },
         "general": {
@@ -26,7 +26,7 @@
         },
         "components": {
             "operational": "Operational",
-            "performanceIssues": "Performance issues",
+            "performanceIssues": "Performance Issues",
             "partialOutage": "Restricted",
             "majorOutage": "Major Outage",
             "maintenance": "Maintenance",
