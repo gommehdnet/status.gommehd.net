@@ -7,7 +7,7 @@ const useStatus = (components) => {
   useEffect(() => {
     let statusSet = false;
 
-    if (getComponentLabelPercent(components, "operational") <= 100) {
+    if (getComponentLabelPercent(components, "operational") < 100) {
       setStatus(statuses.issues);
       statusSet = true;
     }
