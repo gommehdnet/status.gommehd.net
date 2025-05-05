@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import Components from "./components";
@@ -37,10 +37,10 @@ const App = () => {
     <Container>
       <Header />
       <Router>
-        <Switch>
-          <Route path="/" exact component={MainPage} />
-          <Route path="**" component={FourZeroFour} />
-        </Switch>
+        <Routes>
+          <Route index element={<MainPage />} />
+          <Route path="*" element={<FourZeroFour />} />
+        </Routes>
       </Router>
       <Footer />
     </Container>

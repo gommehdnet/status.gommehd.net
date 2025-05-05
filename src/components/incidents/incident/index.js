@@ -66,7 +66,9 @@ const IncidentCompound = ({ incident }) => (
     </Details>
     <Title>{incident.title}</Title>
     <Comment>
-      <ReactMarkdown className="incident" children={incident.body} />
+        <div className="incident">
+            <ReactMarkdown children={incident.body} />
+        </div>
     </Comment>
   </Incident>
 );

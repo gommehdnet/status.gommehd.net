@@ -6,7 +6,7 @@ import l10n from '../../language';
 
 const StatusBar = styled.div`
   background-color: ${(props) =>
-    props.backgroundColour ? props.backgroundColour : "#b1b1b1"};
+    props.backgroundColor ? props.backgroundColor : "#b1b1b1"};
   color: white;
   padding: 16px;
   border-radius: 3px;
@@ -59,7 +59,7 @@ const StatusCompound = ({ loading, error, components, refetch }) => {
           {JSON.stringify(error.errors, null, 3)}
         </Code>
       )}
-      <StatusBar className={`status-bar ${status?.name}`} backgroundColour={status?.backgroundColour}>
+      <StatusBar className={`status-bar ${status?.name}`} backgroundColor={status?.backgroundColor}>
         <Status>{status?.message}</Status>
         <ReloadContainer>{l10n.general.refresh}<Reload onClick={refetch}>{loading ? l10n.general.refreshing : timeAgo}</Reload></ReloadContainer>
       </StatusBar>

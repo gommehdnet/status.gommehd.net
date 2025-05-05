@@ -1,4 +1,5 @@
 import LocalizedStrings from 'react-localization'
 import strings from './strings.json'
 
-export default new LocalizedStrings(strings)
+const localizedStrings = new LocalizedStrings(strings)
+export default localizedStrings
